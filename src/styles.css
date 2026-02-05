@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #0a0a1a;
+  --color-bg-card: rgba(15, 15, 35, 0.8);
+  --color-cyan: #00f0ff;
+  --color-magenta: #ff00aa;
+  --color-neon-green: #00ff88;
+  --color-text: #ffffff;
+  --color-text-dim: #8888aa;
+  --color-grid-line: rgba(0, 240, 255, 0.08);
+  --color-border-glow: rgba(0, 240, 255, 0.2);
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px var(--color-cyan), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.glow-text-magenta {
+  text-shadow: 0 0 10px var(--color-magenta), 0 0 20px rgba(255, 0, 170, 0.3);
+}
+
+.glow-border {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.15), inset 0 0 10px rgba(0, 240, 255, 0.05);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-cyan), #0088ff);
+  color: #000;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-cyan);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border-glow);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
